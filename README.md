@@ -2,49 +2,90 @@
 
 Como empresarios estao criando SaaS com IA e monetizando MUITO. Passo a passo pra aplicar ja.
 
-Este pacote tem **10 prompts numerados** que levam voce do zero (so a vontade de ter um SaaS) ate o primeiro pagamento na conta.
+> Esse pacote tem **10 prompts numerados em sequencia**, **um exemplo completo** mostrando um SaaS ficticio sendo construido do zero ao primeiro pagamento, **codigo starter** pro build (Next.js + Supabase + Stripe), e **frameworks de decisao com numeros** (nao "achismo").
 
-## Pra quem e
+## A premissa honesta
 
-- Empresario que ja tem um negocio e quer transformar conhecimento/operacao em SaaS recorrente
-- Profissional que entende de uma area e quer empacotar isso em produto digital
+A maior parte do conteudo de "como criar SaaS" e:
+
+- **Romantica:** fala de visao, missao, "encontrar sua paixao"
+- **Confusa:** mistura SaaS de R$ 50/mes com unicornio de R$ 100M
+- **Generica:** "achar nicho" sem explicar como
+- **Tecnica demais:** assume que voce ja conhece Next.js, Stripe, Supabase
+
+Esse pacote e diferente:
+
+- **Cirurgico:** passo a passo com saidas concretas
+- **B2B de nicho ate R$ 100k MRR:** o segmento real onde voce consegue caixa rapido
+- **Numeros reais:** custo, timeline, criterios de decisao com threshold
+- **Tecnico no necessario:** codigo starter funcionando + Claude Code montando o resto
+
+## Quem deve ler
+
+- Empresario que ja tem um negocio e quer transformar conhecimento em SaaS recorrente
+- Profissional que entende profundamente de uma area (contador, advogado, agencia, consultor) e quer empacotar
 - Quem ja tentou criar SaaS e travou em "achar nicho" ou "fazer o MVP"
 
-## Pra quem NAO e
+## Quem **nao** deve ler
 
-- Quem quer fazer "o proximo Notion" — esse pacote e pra SaaS de nicho, ate ~R$ 100k MRR
+- Quem quer fazer "o proximo Notion" — nao e pra isso
 - Quem nao quer cobrar dinheiro de cliente nenhum — sem cobrar, nao tem caixa rapido
+- Quem nao tem nenhum acesso a um nicho especifico — voce vai precisar de canal pra encontrar 100 leads
 
-## Os 10 prompts
+## Conteudo
 
-| # | Prompt | O que voce sai com isso |
+| # | Arquivo | O que voce sai com isso |
 |---|---|---|
-| 00 | LEIA-PRIMEIRO | Mentalidade e ordem |
-| 01 | NICHO | 3 nichos lucrativos avaliados |
-| 02 | VALIDACAO | Plano de validacao em 7 dias |
+| 00 | LEIA-PRIMEIRO | Mentalidade + ordem + criterio de continuar |
+| 01 | NICHO | 3 nichos avaliados + 1 escolhido com persona |
+| 02 | VALIDACAO | Plano de validacao 7 dias + criterios objetivos pra seguir |
 | 03 | MVP-MINIMO | Escopo cortado ao osso |
-| 04 | ARQUITETURA | Stack escolhida e justificada |
-| 05 | LANDING | Landing page que converte |
-| 06 | BUILD | MVP construido com Claude Code |
-| 07 | PAGAMENTO | Stripe/Mercado Pago plugado |
-| 08 | LANCAMENTO | Plano de lancamento de 7 dias |
-| 09 | FEEDBACK | Sistema pra colher feedback dos primeiros usuarios |
-| 10 | ESCALA | Quando e como escalar (ou matar o produto) |
+| 04 | ARQUITETURA | Stack escolhida + modelo de dados + ordem de construcao |
+| 05 | LANDING | Landing codada (Next.js + Tailwind + shadcn) |
+| 06 | BUILD | MVP construido com codigo starter pronto |
+| 07 | PAGAMENTO | Stripe/MP plugado com codigo starter pronto |
+| 08 | LANCAMENTO | Plano 7 dias + mensagens prontas |
+| 09 | FEEDBACK | Sistema de customer success em 30 dias |
+| 10 | ESCALA | Decisao escalar/pivotar/matar com framework numerico |
+| E | EXEMPLO-COMPLETO | Tudo isso aplicado num SaaS ficticio (PontoFiscal pra contadores) |
 
-## Tempo total estimado
+## Tempo realista
 
-- **Modo agressivo:** 14 dias do nicho ao primeiro pagamento
-- **Modo realista:** 30-45 dias se voce tem um trabalho durante o dia
-- **Modo lento:** 90 dias se voce vai 100% sozinho aprendendo na marra
+- **Modo agressivo (full-time):** 14-21 dias do nicho ao primeiro pagamento
+- **Modo realista (com trabalho durante o dia):** 30-45 dias
+- **Modo lento (sozinho aprendendo):** 60-90 dias
 
-Os prompts cabem em todos os tres modos — o que muda e a velocidade que voce executa.
+Os prompts cabem em todos. O que muda e a velocidade.
 
 ## Como usar
 
-1. Comece pelo `00-LEIA-PRIMEIRO.md`
-2. Faca os prompts em ordem (de 01 a 10)
-3. Nao pule etapa. Pular `02-VALIDACAO` e a forma mais comum de torrar 30 dias num produto que ninguem quer
-4. Cada prompt gera artefato (texto, codigo, plano). Salve em pasta propria do seu projeto
+1. Le `00-LEIA-PRIMEIRO.md` (10 minutos)
+2. Le `EXEMPLO-COMPLETO.md` (30 minutos) — voce ve um SaaS sendo construido inteiro. Vale ouro.
+3. Faz os 10 prompts em ordem. **Nao pula etapa.**
+4. Cada prompt gera artefato (texto, codigo, plano). Salva em pasta propria do seu projeto. Versiona com Git.
+
+## Stack que vamos usar
+
+Pra deixar simples e barato:
+
+- **Frontend + Backend:** Next.js 15 + TypeScript + Tailwind + shadcn/ui
+- **Hospedagem:** Vercel (gratis ate dar trafego)
+- **Banco + Auth:** Supabase (gratis ate 50k linhas e 50k MAU)
+- **Pagamento:** Stripe (recorrencia BRL, com PIX) ou Mercado Pago
+- **Email transacional:** Resend (gratis ate 3k/mes)
+- **IA:** Claude API (paga por uso)
+
+**Custo total mensal antes do primeiro cliente:** R$ 0 a R$ 50.
+
+## A regra das 3 perguntas
+
+Antes de comecar, voce tem que conseguir responder:
+
+1. **Quem paga?** — Nome, cargo, perfil de pessoa especifica. Nao "PMEs". Nao "gestores".
+2. **Quanto paga?** — Quanto essa pessoa ja gasta hoje pra resolver essa dor (ferramenta, mao-de-obra, tempo)?
+3. **Como achar mais delas?** — Existe canal pra encontrar 100 dessas pessoas em ate 30 dias?
+
+Se voce nao consegue responder, **nao comece**. Volta pro 01 e refina.
 
 ---
 
